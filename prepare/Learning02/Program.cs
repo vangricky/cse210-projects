@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 
 class Program
@@ -13,7 +14,7 @@ class Program
         job1._startYear = 2019;
         job1._endYear = 2022;
 
-        job1.Display();
+        // job1.Display();
 
         // Console.WriteLine(job1._company);
 
@@ -23,8 +24,18 @@ class Program
         job2._startYear = 2022;
         job2._endYear = 2023;
 
-        job2.Display();
+        // job2.Display();
 
         // Console.WriteLine(job2._company);
+
+        Resume resume = new Resume();
+
+        resume._name = "Ricky Vang";
+
+        resume._jobs.Add(job1);
+        resume._jobs.Add(job2);
+
+        // Console.WriteLine(resume._jobs[0]._jobTitle);
+        resume.Display();
     }
 }
