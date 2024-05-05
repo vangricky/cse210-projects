@@ -27,9 +27,12 @@ public class Journal {
         }
     }
 
-    public void LoadFromFile()
+    public static List<Entry> LoadFromFile()
     {
+        List<Entry> entries = new List<Entry>();
+        string filename = "entry.txt";
 
+        return entries;
     }
     
 }
