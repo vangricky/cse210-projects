@@ -27,7 +27,6 @@ public class PromptGenerator {
         {
             prompt = "If I had one thing I could do over today, what would it be?";
         }
-        // Console.WriteLine(prompt);
         return prompt;
     }
 }

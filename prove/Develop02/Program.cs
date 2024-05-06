@@ -9,12 +9,7 @@ class Program
         PromptGenerator PromptGet = new PromptGenerator();
         PromptGet.GetRandomPrompt();
 
-        DateTime theCurrentTime = DateTime.Now;
-        string dateText = theCurrentTime.ToShortDateString();
-
         Journal journal = new Journal();
-
-        Entry e = new Entry();
     
         int digit = -1;
         string answer = "";
@@ -32,22 +27,20 @@ class Program
 
             if (digit == 1)
             {
-                Console.WriteLine(PromptGet.GetRandomPrompt());
-                answer = Console.ReadLine();
-                Console.WriteLine("");
+
+                journal.AddEntry();
             }
             else if (digit == 2)
             {
-                 Console.WriteLine(answer);
-                 Console.WriteLine("");
+                journal.DisplayAll();
             }
             else if (digit == 3) 
             {
-                
+                journal.LoadFromFile();
             }
             else if (digit == 4)
             {
-                
+                journal.SaveToFile();
             }
             else
             {
